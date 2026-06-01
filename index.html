@@ -3,6 +3,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Petii.site - Pet Care in Japan</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f7;
+    color: #222;
+    line-height: 1.6;
+}
+
+header {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+nav {
+    background: #111;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    background: #333;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+}
+
+.section {
+    margin-bottom: 40px;
+}
+
+h1, h2, h3 {
+    color: #ff0000;
+}
+
+footer {
+    background: #111;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+@media(max-width:600px){
+    nav { flex-direction: column; align-items:center; }
+}
+</style>
+</head>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
  <script>
      function aesDecode(encodedText) {
@@ -95,76 +164,7 @@
             
              autoCloseTimer = setTimeout(() => hide("closed"), 5000);
          });
-     </script>	
-
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Petii.site - Pet Care in Japan</title>
-
-<style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f4f6f7;
-    color: #222;
-    line-height: 1.6;
-}
-
-header {
-    background: #000;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-}
-
-nav {
-    background: #111;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 15px;
-    font-size: 14px;
-}
-
-nav a:hover {
-    background: #333;
-}
-
-.container {
-    max-width: 1000px;
-    margin: auto;
-    background: #fff;
-    padding: 20px;
-}
-
-.section {
-    margin-bottom: 40px;
-}
-
-h1, h2, h3 {
-    color: #ff0000;
-}
-
-footer {
-    background: #111;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-    font-size: 14px;
-}
-
-@media(max-width:600px){
-    nav { flex-direction: column; align-items:center; }
-}
-</style>
-</head>
-
+     </script>
 <body>
 
 <header>
@@ -453,6 +453,7 @@ By using this website, you acknowledge that any actions you take based on the in
 </section>
 
 </div>
+
 
 
 </body>
